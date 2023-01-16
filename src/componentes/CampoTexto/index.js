@@ -1,9 +1,11 @@
+import './CampoTexto.css'
+
 //escopo lexico
 const CampoTexto = () => {
     return (
-        <div>
+        <div className="campo-texto">
             <label>Nome</label>
-            <input />
+            <input placeholder='Digite aqui o seu nome'/>
         </div>
     )
 
