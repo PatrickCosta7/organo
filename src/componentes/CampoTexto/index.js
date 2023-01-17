@@ -1,11 +1,18 @@
 import './CampoTexto.css'
 
+
 //escopo lexico
-const CampoTexto = () => {
+const CampoTexto = (props) => {
+
+    const placeholderMudado = `${props.placeholder}...`;
+    
+    console.log(props);
     return (
         <div className="campo-texto">
-            <label>Nome</label>
-            <input placeholder='Digite aqui o seu nome'/>
+            <label>
+                {props.label}
+            </label>
+            <input placeholder={placeholderMudado}/>
         </div>
     )
 
