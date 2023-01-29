@@ -14,31 +14,31 @@ function App() {
     {
       nome: 'Front-end',
       corPrimaria: '#82CFFA',
-      corSecundaria: 'EBF8FF'
+      corSecundaria: '#EBF8FF'
     },
     {
       nome: 'Data Science',
-      corPrimaria: 'A6D157',
+      corPrimaria: '#A6D157',
       corSecundaria: '#F0F8E2'
     },
     {
       nome: 'Devops',
-      corPrimaria: 'E06869',
+      corPrimaria: '#E06869',
       corSecundaria: '#FDE7E8'
     },
     {
       nome: 'UX e Design',
-      corPrimaria: 'DB6EBF',
+      corPrimaria: '#DB6EBF',
       corSecundaria : '#FAE9F5'
     },
     {
       nome: 'Mobile',
-      corPrimaria: 'FFBA05',
-      corSecundaria: '#FFFSD9'
+      corPrimaria: '#FFBA05',
+      corSecundaria: '#FFF5D9'
     },
     {
       nome: 'Inovação e Gestão',
-      corPrimaria: 'FF8A29',
+      corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF'
     }
   ] 
@@ -54,10 +54,10 @@ function App() {
     <div className="App">
       <Banner/>
       <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
-      <Time name="Progamação" />
-      <Time name="Front-end" />
-      <Time name="Data Science" />
+      
+      {times.map(times => <Time key={times.nome} name={times.nome} corPrimaria={times.corPrimaria} corSecundaria={times.corSecundaria} />)}
 
+      
     </div>
   );
 }
