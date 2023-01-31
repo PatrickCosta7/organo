@@ -55,12 +55,12 @@ function App() {
       <Banner/>
       <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
       
-      {times.map(times => <Time
-       key={times.nome}
-       name={times.nome} 
-       corPrimaria={times.corPrimaria} 
-       corSecundaria={times.corSecundaria} 
-       colaboradores={colaboradores}
+      {times.map(time => <Time
+       key={time.nome}
+       name={time.nome} 
+       corPrimaria={time.corPrimaria} 
+       corSecundaria={time.corSecundaria} 
+       colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}
 
       
