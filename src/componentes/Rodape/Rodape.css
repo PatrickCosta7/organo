@@ -1,20 +1,17 @@
-.rodape{
-    background: #6278f7;
-    margin: 0;
+.footer {
+    background: #6278F7;
+    color: #FFF;
+    padding: 40px;
     display: flex;
-    flex-direction: row;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-}
-
-.elementos{
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    color: #ffffff;
-    margin: 15px 15px;
 }
 
-.elementos img{
-    margin: 0 0 10px 10px;
+.footer ul li {
+    display: inline-block;
+    margin-right: 32px;
 }
 
+.footer ul li:last-child {
+    margin-right: 0;
+}
