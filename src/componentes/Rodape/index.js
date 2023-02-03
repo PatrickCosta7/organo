@@ -3,23 +3,25 @@ import './Rodape.css'
 const Rodape = () => {
 
     return(
-        <footer className='rodape'>
+        
+        <section className='rodape'>
+            
+            <div className='elementos'>
+                <img src="/imagens/fb.png" alt='facebook'/>
+                <img src="/imagens/tw.png" alt='twitter'/>
+                <img src="/imagens/ig.png" alt='instagram'/>
+            </div>
 
-            
-            <img src="/imagens/fb.png" alt='facebook'/>
-            <img src="/imagens/tw.png" alt='twitter'/>
-            <img src="/imagens/ig.png" alt='instagram'/>
-            
+            <div className='elementos'>
+                <img src='/imagens/logo.png' alt='organo'/>
+            </div>
 
-            
-            <img src='/imagens/logo.png' alt='organo'/>
-            
+            <div className='elementos'>
+                <h3>Desenvolvido pela alura</h3>
+            </div>
+        
+        </section>        
 
-            
-            <h3>Desenvolvido pela alura</h3>
-            
-
-        </footer>
     )
 
 }
