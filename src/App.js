@@ -4,6 +4,8 @@ import Formulario from './componentes/Formulario';
 import Rodape from './componentes/Rodape';
 import Time from './componentes/Time';
 
+//Não é necessário importar React já que no tsconfig is set as react-jsx
+
 function App() {
 
   const times = [
