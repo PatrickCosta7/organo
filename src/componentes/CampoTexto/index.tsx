@@ -49,10 +49,3 @@ export default CampoTexto;
 //     setValor(evento.target.value);
 //     console.log(valor);
 // }
-
-
-
-
-
-
-
