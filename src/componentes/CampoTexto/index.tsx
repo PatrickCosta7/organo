@@ -7,10 +7,11 @@ interface CampoTextoProps {
     label: string
     valor: string
     obrigatorio?: boolean
+    tipo?: 'text' | 'password' | 'date' | 'email' | 'number' // posso colocar diferentes tipos
 }
 
 //escopo lexico
-const CampoTexto = ({ aoAlterado, placeholder, label, valor, obrigatorio = false  } : CampoTextoProps) => { // = define o valor padrão, mas pode ser sobrescrito
+const CampoTexto = ({ aoAlterado, placeholder, label, valor, obrigatorio = false, tipo = 'text'  } : CampoTextoProps) => { // = define o valor padrão, mas pode ser sobrescrito
 
     const placeholderMudado = `${placeholder}...`;
     
@@ -29,6 +30,7 @@ const CampoTexto = ({ aoAlterado, placeholder, label, valor, obrigatorio = false
                 onChange={aoDigitado} 
                 required={obrigatorio} 
                 placeholder={placeholderMudado}
+                type={tipo}
             />
         </div>
     )

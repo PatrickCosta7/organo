@@ -16,6 +16,7 @@ const Formulario = (props: FormularioProps) => {
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
     const [time, setTime] = useState('');
+    const [data, setData] = useState('');
 
 
     const aoSalvar = (evento: React.FormEvent<HTMLFormElement>) => {
@@ -24,7 +25,8 @@ const Formulario = (props: FormularioProps) => {
             nome, //== nome: nome 
             cargo,
             imagem,
-            time
+            time,
+            data
         })
         setNome('')
         setCargo('')
@@ -58,6 +60,14 @@ const Formulario = (props: FormularioProps) => {
                 placeholder="Digite aqui o link da imagem desejada"
                 valor={imagem}
                 aoAlterado={valor => setImagem(valor)}
+            />
+            
+            <CampoTexto 
+                label="Data" 
+                placeholder=""
+                valor={data}
+                aoAlterado={valor => setData(valor)}
+                tipo="date"
             />
 
             <ListaSuspensa 
