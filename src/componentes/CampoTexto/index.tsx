@@ -6,11 +6,11 @@ interface CampoTextoProps {
     placeholder: string
     label: string
     valor: string
-    obrigatorio: boolean
+    obrigatorio?: boolean
 }
 
 //escopo lexico
-const CampoTexto = ({ aoAlterado, placeholder, label, valor, obrigatorio } : CampoTextoProps) => {
+const CampoTexto = ({ aoAlterado, placeholder, label, valor, obrigatorio = false  } : CampoTextoProps) => { // = define o valor padrão, mas pode ser sobrescrito
 
     const placeholderMudado = `${placeholder}...`;
     

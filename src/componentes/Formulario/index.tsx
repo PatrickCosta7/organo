@@ -7,6 +7,7 @@ import './Formulario.css'
 
 interface FormularioProps {
     aoColaboradorCadastrado: (colaborador: IColaborador) => void
+    times: string[]
 }
 
 const Formulario = (props: FormularioProps) => {
@@ -17,7 +18,7 @@ const Formulario = (props: FormularioProps) => {
     const [time, setTime] = useState('');
 
 
-    const aoSalvar = (evento: React.FormEventHandler<HTMLFormElement>) => {
+    const aoSalvar = (evento: React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault();
         props.aoColaboradorCadastrado({
             nome, //== nome: nome 
@@ -33,7 +34,7 @@ const Formulario = (props: FormularioProps) => {
 
     return (
         <section className="formulario">
-            <form onSubmit={evento => aoSalvar}>
+            <form onSubmit={aoSalvar}>
             
             <h2>Preencha os dados para criar o card do colaborador</h2>
             <CampoTexto 

@@ -4,7 +4,7 @@ import './Botao.css'
 //todo componente deve estar em TSX e não ts
 
 interface BotaoProps {
-    children: ReactElement
+    children: ReactElement | string
 }
 
 const Botao = (props: BotaoProps) => {
