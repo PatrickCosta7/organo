@@ -10,6 +10,7 @@ interface TimeProps {
     
 }
 
+// no app tsx houve erro com Time por conta que abaixo havia a possibilidade de retornar uma string ou um element, solução foi substituir a string por um fragment
 const Time = (props: TimeProps) => {
     const css = { backgroundColor: props.corSecundaria };
 
@@ -27,7 +28,7 @@ const Time = (props: TimeProps) => {
                     /> )}
             </div>
         </section>
-        : ''
+        : <></>
     )
 }
 
